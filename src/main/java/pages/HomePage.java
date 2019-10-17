@@ -21,6 +21,11 @@ public class HomePage {
         return new DropdownPage(driver);
     }
 
+    public ForgotPasswordPage clickForgotPassword(){
+        clickLink("Forgot Password");
+        return new ForgotPasswordPage(driver);
+    }
+
     private void clickLink(String linktext) {
         driver.findElement(By.linkText(linktext)).click();
     }
